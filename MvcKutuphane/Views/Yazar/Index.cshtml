@@ -1,0 +1,55 @@
+﻿@using MvcKutuphane.Models.Entity
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Stylesheet" type="text/css" href="~/StyleSheet1.css">
+    <style>
+        body {
+            background-image: url('../../resimler/outside-background.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .tablestil {
+            background-color: #a0dad2;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h2 class="yazarlabel">Index Yazarlar</h2>
+    <div class="container">
+        <table class="table table-striped tablestil">
+            <tr style="background-color: #048876">
+                <th>ID</th>
+                <th>AD</th>
+                <th>SOYAD</th>
+                <th>SİL</th>
+                <th>GÜNCELLE</th>
+                <th>YAZARIN KİTAPLARI</th>
+            </tr>
+            @foreach (var y in Model)
+            {
+                <tr>
+                    <td>@y.ID</td>
+                    <td>@y.AD</td>
+                    <td>@y.SOYAD</td>
+                    <td>@Html.ActionLink("Sil", "YazarSil", new { id = y.ID }, new { @class = "button button2", onclick = "return confirm('Silmek İstiyor Musunuz?')" })</td>
+                    <td><a href="/Yazar/YazarGetir/@y.ID" class="button button4">Güncelle</a></td>
+                    <td><a href="/Yazar/YazarKitaplar/@y.ID" class="button button1" >Yazarın Kitapları</a></td>
+                </tr>
+            }
+        </table>
+    </div>
+    <a href="/Yazar/YazarEkle/" class="button button3">Yeni Yazar Ekle</a>
+   
+</body>
+</html>
+

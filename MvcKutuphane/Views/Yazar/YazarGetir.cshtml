@@ -1,0 +1,40 @@
+﻿@model MvcKutuphane.Models.Entity.TBLYAZAR
+@{
+    ViewBag.Title = "YazarGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<link rel="Stylesheet" type="text/css" href="~/StyleSheet1.css">
+<body class="yazararka">
+    @using (Html.BeginForm("YazarGuncelle", "Yazar", FormMethod.Post))
+    {
+        <div style=" margin-bottom:15px"></div>
+        <div class="form-group">
+            <table class="table table-responsive tableboyut" border="0" style="background-color: #d2e5e3">
+                <tr>
+                    <td>Yazar ID</td>
+                    <td>@Html.TextBoxFor(y => y.ID, new { @class = "form-control" })</td>
+                </tr>
+                <tr>
+                    <td>Yazar Adı</td>
+                    <td>@Html.TextBoxFor(y => y.AD, new { @class = "form-control" })</td>
+                </tr>
+                
+                <tr>
+                    <td>Yazar Soyadı</td>
+                    <td>@Html.TextBoxFor(y => y.SOYAD, new { @class = "form-control" })</td>
+                </tr>
+                    
+                <tr>
+                    <td>Yazar Detay Bilgileri</td>
+                    <td>@Html.TextAreaFor(y => y.DETAY, new { @class = "form-control" })</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="button button1">Yazar Bilgilerini Güncelle</button></td>
+                </tr>
+                
+            </table>
+        </div>
+    }
+
+</body>

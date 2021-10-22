@@ -1,0 +1,115 @@
+﻿body {
+}
+.button {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.button1 {
+    background-color: #AEF6B1;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+    .button1:hover {
+        background-color: #67BF74;
+        color: white;
+    }
+
+.button2 {
+    background-color: #FBCEC6;
+    color: black;
+    border: 2px solid #b64d3a;
+}
+
+    .button2:hover {
+        background-color: #d2604c;
+        color: white;
+    }
+
+.button3 {
+    background-color: #9FD7F1;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+    .button3:hover {
+        background-color: #008CBA;
+        color: white;
+    }
+.button4 {
+    background-color: #fca355;
+    color: black;
+    border: 2px solid #de8334;
+}
+
+    .button4:hover {
+        background-color: #da8c47;
+        color: white;
+    }
+.silbutton{
+
+    background-color: #FBCEC6;
+    color: black;
+    border: 2px solid #b64d3a;
+}
+
+    .silbutton:hover {
+        background-color: #d2604c;
+        color: white;
+    }
+.guncellebutton {   
+    background-color: #AEF6B1;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+    .guncellebutton:hover {
+        background-color: #67BF74;
+        color: white;
+    }
+.eklebutton {
+    background-color: #9FD7F1;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+    .eklebutton:hover {
+        background-color: #008CBA;
+        color: white;
+    }
+
+.yazararka {
+    background-image: url('../../resimler/unnamed.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.yazarlabel{
+    color:azure;
+}
+.yazarboyutdiv{
+    height:auto;
+    
+    
+}
+.tableboyut {
+    width: 75%;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.tablecolor {
+    background-color: #01496B;
+    color: aliceblue;
+}

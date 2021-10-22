@@ -1,0 +1,67 @@
+﻿@model MvcKutuphane.Models.Entity.TBLKATEGORI
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <style>
+            .tableboyut {
+                width: 75%;
+                border-radius: 12px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            body {
+                background-image: url('../../resimler/unnamed.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+        </style>
+
+        <script>
+            function onayla() {
+                alert("Güncelleme Başarılı");
+            }
+        </script>
+    </head>
+<body>
+    @using (Html.BeginForm("KategoriGuncelle", "Kategori", FormMethod.Post))
+    {
+        <div style=" margin-bottom:15px"></div>
+        <div class="form-group">
+            <div>
+
+
+                <table class="table table-responsive tableboyut" border="0" style="background-color: #d2e5e3">
+                    <tr>
+                        <td>@Html.LabelFor(k => k.ID)</td>
+                        <td>
+                            @Html.TextBoxFor(k => k.ID, new { @class = "form-control" })
+                            <br />
+                            @*@Html.LabelFor(k=>k.AD)*@
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><bold>KATEGORİ ADI</bold></td>
+                        <td> @Html.TextBoxFor(k => k.AD, new { @class = "form-control" })</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td><button class="btn btn-warning" onclick="onayla()">Güncelle</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+    }
+    </body>
+    </html>
